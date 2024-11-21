@@ -460,6 +460,7 @@ if __name__ == "__main__":
     all_dirs = get_dir()
     if all_dirs:
         for i in all_dirs:
+            print(i)
             records.extend(dir_list(i.get("dir").get("id")))
     records = {x.get("recordTitle"): x for x in records if x.get("recordStatus") != 40}
     print(f"获取所有转写记录：{len(records)}")
